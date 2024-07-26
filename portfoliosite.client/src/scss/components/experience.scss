@@ -1,0 +1,57 @@
+/// <reference path="../general/variables.scss" />
+
+.experience {
+
+    &__item {
+        border-bottom: 2px solid $soft-blue-30;
+        margin-bottom: 40px;
+
+        h3 {
+            margin-bottom: 40px;
+        }
+    }
+
+    .experience-point {
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+            border-bottom: 1px dashed $soft-blue-30;
+        }
+
+        .point-title {
+            font-size: 22px;
+            line-height: 30px;
+            font-weight: 400;
+        }
+
+        .point-job-title {
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 400;
+        }
+
+        .point-date {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 700;
+        }
+
+        .point-location {
+            font-size: 15px;
+            line-height: 18px;
+            font-weight: 400;
+        }
+
+        @media #{$medium-down} {
+            .point-title, .point-job-title, .point-date, .point-location {
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 16px;
+            }
+        }
+
+        .point-description {
+            padding-block: 20px 15px;
+        }
+    }
+}

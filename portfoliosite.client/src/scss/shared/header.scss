@@ -1,0 +1,68 @@
+/// <reference path="../general/variables.scss" />
+
+.site-header {
+    padding-block: 20px;
+    margin-bottom: 40px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            column-gap: 25px;
+            row-gap: 5px;
+            flex-wrap: wrap;
+        }
+    }
+
+    .grid-container {
+        padding-inline: 10px;
+
+        @media #{$small-only} {
+            padding-inline: 0;
+        }
+    }
+
+    a {
+        font-size: 18px;
+        line-height: 20px;
+        display: inline-block;
+        font-weight: 600;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 20px;
+            bottom: 15px;
+            width: 0;
+            height: 2px;
+            background-color: $soft-blue-30;
+            transition: width 0.2s ease-in-out;
+        }
+
+        &:hover::after {
+            width: calc(100% - 40px);
+        }
+
+        &.main-link {
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 700;
+        }
+    }
+
+    a, button {
+        padding: 20px;
+    }
+
+    button {
+        i {
+            font-size: 25px;
+            line-height: 25px;
+        }
+    }
+}

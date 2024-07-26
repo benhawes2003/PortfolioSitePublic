@@ -1,0 +1,115 @@
+/// <reference path="../general/variables.scss" />
+
+.featured-projects {
+    padding-inline: 60px;
+    position: relative;
+
+    @media #{$medium-down} {
+        padding-inline: 0;
+    }
+
+    .react-multi-carousel-dot {
+        button {
+            border: none !important;
+            background: $soft-blue-30;
+        }
+
+        &--active {
+            button {
+                background: $soft-blue !important;
+            }
+        }
+    }
+
+    .react-multiple-carousel__arrow {
+        @media #{$medium-down} {
+            display: none;
+        }
+
+        background-color: $soft-blue;
+        border-radius: 30px;
+        padding: 15px;
+        font-weight: 700;
+        box-shadow: $box-shadow;
+        transition: 0.3s ease-in-out;
+
+        &::before {
+            color: $white !important;
+        }
+
+        &:hover {
+            background-color: $white;
+
+            &::before {
+                color: $soft-blue !important;
+            }
+        }
+
+        &::before {
+            font-family: $font-awesome;
+        }
+
+        &--right {
+            right: 0 !important;
+
+            &:before {
+                content: '\f061';
+            }
+        }
+
+        &--left {
+            left: 0 !important;
+
+            &:before {
+                content: '\f060';
+            }
+        }
+    }
+
+    .react-multi-carousel-dot-list {
+        bottom: -30px;
+    }
+
+    .featured-projects-slider {
+        margin-inline: -12px;
+        position: static;
+
+        &__item {
+            padding-inline: 12px;
+            display: flex;
+
+            div, &__inner {
+                width: 100%;
+                min-height: 100%;
+            }
+
+            &__inner {
+                display: flex;
+                background-color: $soft-blue-30;
+                border-radius: 10px;
+                align-items: center;
+                padding: 24px;
+                gap: 16px;
+                justify-content: space-between;
+
+                p, i {
+                    color: $black;
+                }
+
+                i {
+                    font-size: 30px;
+                }
+
+                .text-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

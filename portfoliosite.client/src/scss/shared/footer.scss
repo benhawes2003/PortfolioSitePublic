@@ -1,0 +1,51 @@
+/// <reference path="../general/variables.scss" />
+
+.site-footer {
+    padding-block: 100px 50px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        @media #{$medium-down} {
+            flex-direction: column;
+        }
+    }
+
+    .page-links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        column-gap: 16px;
+        row-gap: 5px;
+        flex-wrap: wrap;
+
+        @media #{$medium-down} {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+        }
+    }
+
+    .social-links {
+        padding: 20px;
+    }
+
+    .grid-container {
+        padding-inline: 10px;
+
+        @media #{$small-only} {
+            padding-inline: 0;
+        }
+    }
+
+    a {
+        font-size: 15px;
+        line-height: 17px;
+        display: inline-block;
+        font-weight: 500;
+        position: relative;
+        padding: 13px 15px;
+    }
+}

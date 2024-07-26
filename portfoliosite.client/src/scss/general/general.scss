@@ -1,0 +1,72 @@
+/// <reference path="variables.scss" />
+
+h1,h2,h3,h4,h5,h6,p,a{
+    font-family: $font-primary;
+    color: $soft-blue;
+}
+
+a:hover {
+    color: $black;
+}
+
+body{
+    background-color: $background-grey;
+}
+
+.grid-container{
+    max-width: 1500px;
+    padding-inline: 30px;
+    margin-inline: auto;
+
+    @media #{$small-only}{
+        padding-inline: 20px;
+    }
+}
+
+button{
+    cursor: pointer;
+}
+
+
+h1{
+    margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.content-container {
+    p {
+        color: $black;
+    }
+}
+
+.standard-button {
+    background-color: $soft-blue;
+    border-radius: 30px;
+    padding: 18px 28px;
+    color: $white !important;
+    font-weight: 700;
+    box-shadow: $box-shadow;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $white;
+        color: $soft-blue !important;
+    }
+}
+
+section{
+    margin-bottom: 90px;
+
+    @media #{$medium-down}{
+        margin-bottom: 60px;
+    }
+}
+
+.why{
+    .content-container{
+        margin-bottom: 90px;
+    }
+}

@@ -1,0 +1,15 @@
+//General
+@import 'general/variables.scss';
+@import 'general/general.scss';
+
+//Components
+@import 'components/site-frames.scss';
+@import 'components/intro.scss';
+@import 'components/featured-projects.scss';
+@import 'components/experience.scss';
+@import 'components/skills.scss';
+
+//Shared
+@import 'shared/header.scss';
+@import 'shared/footer.scss';
+@import 'shared/hamburger.scss';
